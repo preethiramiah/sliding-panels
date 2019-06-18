@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <meta charset="utf-8"/>
+        <meta title="Sliding Panels" />
+        <title>Sliding Panels</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script type="text/javascript" src="script.js"></script>
+        <div id="links-sliding-panel">
+            <p><button onclick="scrollToPanel('info1')"><span>Infographic 1</span></button></p>
+            <p><button onclick="scrollToPanel('info2')"><span>Infographic 2</span></button></p>
+            <p><button onclick="scrollToPanel('info3')"><span>Infographic 3</span></button></p>
+        </div>
+        <div id="div-menu" class="div-sliding-panel-menu">
+            <ul id="top-menu-sliding-panel" class="menu-sliding-panel">
+                <li id="top-btn-info1" class="tablink tab-border-top-left-radius" onclick="expandInfographic(this,event,'container-start','btn-info1')">Infographic 1</li>
+                <li id="top-btn-info2" class="tablink" onclick="expandInfographic(this,event,'container-middle','btn-info2')">Infographic 2</li>
+                <li id="top-btn-info3" class="tablink tab-border-top-right-radius" onclick="expandInfographic(this,event,'container-end','btn-info3')">Infographic 3</li>
+            </ul>
+        </div>    
+        <div id="container-sliding-panels">        
+            <div id="container-start" class="container-start first-level-child" onclick="showImage(this,event,'info1')">       
+                <div class="sliding-panel">                
+                    <p id="section-info1">Infographic 1</p>
+                    <img id="info1" alt="Infographic 1" /> 
+                    <button class="expand-infographic">+</button>
+                </div>                  
+                <span class="enlarge-tooltip">
+                    <img src="assets/zoom_icon.png" alt="Click to Zoom" />
+                </span>
+                <img class="close-infographic" src="assets/close.png" onclick="closeInfographic(this,event)" alt="Close Infographic" /> 
+            </div>	        
+            <div id="container-middle" class="container-middle first-level-child" onclick="showImage(this,event,'info2')">
+                <div class="sliding-panel">
+                    <p id="section-info2">Infographic 2</p> 
+                    <img id="info2" alt="Infographic 2" /> 
+                    <button class="expand-infographic">+</button>
+                </div>
+                <span class="enlarge-tooltip">
+                    <img src="assets/zoom_icon.png" alt="Click to Zoom" />
+                </span>
+                <img class="close-infographic" src="assets/close.png" onclick="closeInfographic(this,event)" alt="Close Infographic" />
+            </div>	        
+            <div id="container-end" class="container-end first-level-child" onclick="showImage(this,event,'info3')">
+                <div class="sliding-panel">
+                    <p id="section-info3">Infographic 3</p>
+                    <img id="info3" alt="Infographic 3" /> 
+                    <button class="expand-infographic">+</button>
+                </div>
+                <span class="enlarge-tooltip">
+                    <img src="assets/zoom_icon.png" alt="Click to Zoom" />
+                </span>
+                <img class="close-infographic" src="assets/close.png" onclick="closeInfographic(this,event)" alt="Close Infographic" />
+            </div>	          
+        </div>
+        <div class="div-sliding-panel-menu">
+            <ul id="bottom-menu-sliding-panel" class="menu-sliding-panel">
+            <li id="bottom-btn-info1" class="tablink tab-border-bottom-left-radius" onclick="expandInfographic(this,event,'container-start','btn-info1')">Infographic 1</li>
+            <li id="bottom-btn-info2" class="tablink" onclick="expandInfographic(this,event,'container-middle','btn-info2')">Infographic 2</li>
+            <li id="bottom-btn-info3" class="tablink tab-border-bottom-right-radius" onclick="expandInfographic(this,event,'container-end','btn-info3')">Infographic 3</li>
+            </ul>
+        </div> 
+    </body>
+</html>
